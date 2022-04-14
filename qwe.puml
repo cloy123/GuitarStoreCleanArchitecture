@@ -1,0 +1,199 @@
+@startuml
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FilterCheckboxCardBinding {
+- ConstraintLayout rootView
++ ConstraintLayout card
++ CheckBox checkbox
++ TextView text
++ ConstraintLayout getRoot()
++ {static} FilterCheckboxCardBinding inflate(LayoutInflater)
++ {static} FilterCheckboxCardBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} FilterCheckboxCardBinding bind(View)
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ImageSliderLayoutItemBinding {
+- CardView rootView
++ ImageView image
++ CardView getRoot()
++ {static} ImageSliderLayoutItemBinding inflate(LayoutInflater)
++ {static} ImageSliderLayoutItemBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ImageSliderLayoutItemBinding bind(View)
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentCatalogBinding {
+- DrawerLayout rootView
++ ConstraintLayout constraintLayout
++ DrawerLayout drawerLayout
++ NavigationView navView
++ Button openFilters
++ RecyclerView productRecycler
++ Spinner sortType
++ DrawerLayout getRoot()
++ {static} FragmentCatalogBinding inflate(LayoutInflater)
++ {static} FragmentCatalogBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} FragmentCatalogBinding bind(View)
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ProductCardBinding {
+- CardView rootView
++ Button addToBasket
++ CardView card
++ ConstraintLayout imageCard
++ LinearLayout linear
++ TextView productAvailability
++ ImageView productImage
++ TextView productName
++ TextView productPrice
++ TextView productType
++ CardView getRoot()
++ {static} ProductCardBinding inflate(LayoutInflater)
++ {static} ProductCardBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ProductCardBinding bind(View)
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ProductImageCardBinding {
+- CardView rootView
++ ImageView image
++ CardView getRoot()
++ {static} ProductImageCardBinding inflate(LayoutInflater)
++ {static} ProductImageCardBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ProductImageCardBinding bind(View)
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentBasketBinding {
+- ConstraintLayout rootView
++ EditText address
++ RecyclerView basketRecycler
++ ConstraintLayout constraintAddress
++ Button toOrderButton
++ TextView totalPrice
++ TextView tvAddress
++ TextView tvSum
++ ConstraintLayout getRoot()
++ {static} FragmentBasketBinding inflate(LayoutInflater)
++ {static} FragmentBasketBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} FragmentBasketBinding bind(View)
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentProductBinding {
+- ConstraintLayout rootView
++ Button addToBasket
++ ConstraintLayout constraint
++ ConstraintLayout constraintSlider
++ SliderView imageSlider
++ LinearLayout linearCharacteristic
++ TextView productFirm
++ TextView productModel
++ TextView productName
++ TextView productPrice
++ TextView productQuantity
++ TextView productSpecification
++ TextView productType
++ ConstraintLayout getRoot()
++ {static} FragmentProductBinding inflate(LayoutInflater)
++ {static} FragmentProductBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} FragmentProductBinding bind(View)
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentStartBinding {
+- ConstraintLayout rootView
++ TextView basket
++ Button inShopButton
++ TextView login
++ TextView out
++ TextView registration
++ ConstraintLayout getRoot()
++ {static} FragmentStartBinding inflate(LayoutInflater)
++ {static} FragmentStartBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} FragmentStartBinding bind(View)
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentLoginBinding {
+- ConstraintLayout rootView
++ Button buttonLogin
++ Button buttonRegistration
++ TextInputEditText login
++ TextInputLayout loginTextInput
++ TextInputEditText password
++ TextInputLayout passwordTextInput
++ TextView tvInfo
++ ConstraintLayout getRoot()
++ {static} FragmentLoginBinding inflate(LayoutInflater)
++ {static} FragmentLoginBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} FragmentLoginBinding bind(View)
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentRegistrationBinding {
+- ConstraintLayout rootView
++ Button buttonRegistration
++ TextInputEditText login
++ TextInputLayout loginTextInput
++ TextInputEditText number
++ TextInputLayout numberTextInput
++ TextInputEditText password
++ TextInputLayout passwordTextInput
++ TextView tvInfo
++ ConstraintLayout getRoot()
++ {static} FragmentRegistrationBinding inflate(LayoutInflater)
++ {static} FragmentRegistrationBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} FragmentRegistrationBinding bind(View)
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.CalalogFiltersLayoutBinding {
+- ConstraintLayout rootView
++ Button apply
++ TextView clearFirms
++ TextView clearPrice
++ TextView clearTypes
++ Button close
++ ConstraintLayout constraintFirms
++ ConstraintLayout constraintTypes
++ RecyclerView firmsRecycler
++ EditText fromPrice
++ RecyclerView typesRecycler
++ EditText untilPrice
++ ConstraintLayout getRoot()
++ {static} CalalogFiltersLayoutBinding inflate(LayoutInflater)
++ {static} CalalogFiltersLayoutBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} CalalogFiltersLayoutBinding bind(View)
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.BasketItemCardBinding {
+- CardView rootView
++ TextView availableQuantity
++ CardView card
++ Button delete
++ ConstraintLayout imageCard
++ LinearLayout linear
++ LinearLayout linearButtons
++ Button minusOne
++ Button plusOne
++ ImageView productImage
++ TextView productName
++ TextView productPrice
++ TextView quantity
++ CardView getRoot()
++ {static} BasketItemCardBinding inflate(LayoutInflater)
++ {static} BasketItemCardBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} BasketItemCardBinding bind(View)
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.BuildConfig {
++ {static} boolean DEBUG
++ {static} String APPLICATION_ID
++ {static} String BUILD_TYPE
++ {static} int VERSION_CODE
++ {static} String VERSION_NAME
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ActivityMainBinding {
+- ConstraintLayout rootView
++ ConstraintLayout container
++ Toolbar toolbar
++ ConstraintLayout getRoot()
++ {static} ActivityMainBinding inflate(LayoutInflater)
++ {static} ActivityMainBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityMainBinding bind(View)
+}
+
+
+androidx.viewbinding.ViewBinding <|.. com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FilterCheckboxCardBinding
+androidx.viewbinding.ViewBinding <|.. com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ImageSliderLayoutItemBinding
+androidx.viewbinding.ViewBinding <|.. com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentCatalogBinding
+androidx.viewbinding.ViewBinding <|.. com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ProductCardBinding
+androidx.viewbinding.ViewBinding <|.. com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ProductImageCardBinding
+androidx.viewbinding.ViewBinding <|.. com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentBasketBinding
+androidx.viewbinding.ViewBinding <|.. com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentProductBinding
+androidx.viewbinding.ViewBinding <|.. com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentStartBinding
+androidx.viewbinding.ViewBinding <|.. com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentLoginBinding
+androidx.viewbinding.ViewBinding <|.. com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentRegistrationBinding
+androidx.viewbinding.ViewBinding <|.. com.monsieur.cloy.guitarstorecleanarchitecture.databinding.CalalogFiltersLayoutBinding
+androidx.viewbinding.ViewBinding <|.. com.monsieur.cloy.guitarstorecleanarchitecture.databinding.BasketItemCardBinding
+androidx.viewbinding.ViewBinding <|.. com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ActivityMainBinding
+@enduml

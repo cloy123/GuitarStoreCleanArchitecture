@@ -1,0 +1,201 @@
+@startuml 
+class com.monsieur.cloy.guitarstorecleanarchitecture.BuildConfig{
++ boolean DEBUG
++ java.lang.String APPLICATION_ID
++ java.lang.String BUILD_TYPE
++ int VERSION_CODE
++ java.lang.String VERSION_NAME
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ProductCardBinding{
+- androidx.cardview.widget.CardView rootView
++ android.widget.Button addToBasket
++ androidx.cardview.widget.CardView card
++ androidx.constraintlayout.widget.ConstraintLayout imageCard
++ android.widget.LinearLayout linear
++ android.widget.TextView productAvailability
++ android.widget.ImageView productImage
++ android.widget.TextView productName
++ android.widget.TextView productPrice
++ android.widget.TextView productType
+- void ProductCardBinding (CardView rootView, Button addToBasket, CardView card, ConstraintLayout imageCard, LinearLayout linear, TextView productAvailability, ImageView productImage, TextView productName, TextView productPrice, TextView )
++ androidx.cardview.widget.CardView getRoot ()
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ProductCardBinding inflate (LayoutInflater )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ProductCardBinding inflate (LayoutInflater inflater, ViewGroup parent, boolean )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ProductCardBinding bind (View )
+}
+interface androidx.viewbinding.ViewBinding {
++ android.view.View getRoot ()
+}
+androidx.viewbinding.ViewBinding <|.. com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ProductCardBinding
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ActivityMainBinding{
+- androidx.constraintlayout.widget.ConstraintLayout rootView
++ androidx.constraintlayout.widget.ConstraintLayout container
++ androidx.appcompat.widget.Toolbar toolbar
+- void ActivityMainBinding (ConstraintLayout rootView, ConstraintLayout container, Toolbar )
++ androidx.constraintlayout.widget.ConstraintLayout getRoot ()
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ActivityMainBinding inflate (LayoutInflater )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ActivityMainBinding inflate (LayoutInflater inflater, ViewGroup parent, boolean )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ActivityMainBinding bind (View )
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentLoginBinding{
+- androidx.constraintlayout.widget.ConstraintLayout rootView
++ android.widget.Button buttonLogin
++ android.widget.Button buttonRegistration
++ com.google.android.material.textfield.TextInputEditText login
++ com.google.android.material.textfield.TextInputLayout loginTextInput
++ com.google.android.material.textfield.TextInputEditText password
++ com.google.android.material.textfield.TextInputLayout passwordTextInput
++ android.widget.TextView tvInfo
+- void FragmentLoginBinding (ConstraintLayout rootView, Button buttonLogin, Button buttonRegistration, TextInputEditText login, TextInputLayout loginTextInput, TextInputEditText password, TextInputLayout passwordTextInput, TextView )
++ androidx.constraintlayout.widget.ConstraintLayout getRoot ()
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentLoginBinding inflate (LayoutInflater )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentLoginBinding inflate (LayoutInflater inflater, ViewGroup parent, boolean )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentLoginBinding bind (View )
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentStartBinding{
+- androidx.constraintlayout.widget.ConstraintLayout rootView
++ android.widget.TextView basket
++ android.widget.Button inShopButton
++ android.widget.TextView login
++ android.widget.TextView out
++ android.widget.TextView registration
+- void FragmentStartBinding (ConstraintLayout rootView, TextView basket, Button inShopButton, TextView login, TextView out, TextView )
++ androidx.constraintlayout.widget.ConstraintLayout getRoot ()
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentStartBinding inflate (LayoutInflater )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentStartBinding inflate (LayoutInflater inflater, ViewGroup parent, boolean )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentStartBinding bind (View )
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.BasketItemCardBinding{
+- androidx.cardview.widget.CardView rootView
++ android.widget.TextView availableQuantity
++ androidx.cardview.widget.CardView card
++ android.widget.Button delete
++ androidx.constraintlayout.widget.ConstraintLayout imageCard
++ android.widget.LinearLayout linear
++ android.widget.LinearLayout linearButtons
++ android.widget.Button minusOne
++ android.widget.Button plusOne
++ android.widget.ImageView productImage
++ android.widget.TextView productName
++ android.widget.TextView productPrice
++ android.widget.TextView quantity
+- void BasketItemCardBinding (CardView rootView, TextView availableQuantity, CardView card, Button delete, ConstraintLayout imageCard, LinearLayout linear, LinearLayout linearButtons, Button minusOne, Button plusOne, ImageView productImage, TextView productName, TextView productPrice, TextView )
++ androidx.cardview.widget.CardView getRoot ()
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.BasketItemCardBinding inflate (LayoutInflater )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.BasketItemCardBinding inflate (LayoutInflater inflater, ViewGroup parent, boolean )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.BasketItemCardBinding bind (View )
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentBasketBinding{
+- androidx.constraintlayout.widget.ConstraintLayout rootView
++ android.widget.EditText address
++ androidx.recyclerview.widget.RecyclerView basketRecycler
++ androidx.constraintlayout.widget.ConstraintLayout constraintAddress
++ android.widget.Button toOrderButton
++ android.widget.TextView totalPrice
++ android.widget.TextView tvAddress
++ android.widget.TextView tvSum
+- void FragmentBasketBinding (ConstraintLayout rootView, EditText address, RecyclerView basketRecycler, ConstraintLayout constraintAddress, Button toOrderButton, TextView totalPrice, TextView tvAddress, TextView )
++ androidx.constraintlayout.widget.ConstraintLayout getRoot ()
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentBasketBinding inflate (LayoutInflater )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentBasketBinding inflate (LayoutInflater inflater, ViewGroup parent, boolean )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentBasketBinding bind (View )
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentCatalogBinding{
+- androidx.drawerlayout.widget.DrawerLayout rootView
++ androidx.constraintlayout.widget.ConstraintLayout constraintLayout
++ androidx.drawerlayout.widget.DrawerLayout drawerLayout
++ com.google.android.material.navigation.NavigationView navView
++ android.widget.Button openFilters
++ androidx.recyclerview.widget.RecyclerView productRecycler
++ android.widget.Spinner sortType
+- void FragmentCatalogBinding (DrawerLayout rootView, ConstraintLayout constraintLayout, DrawerLayout drawerLayout, NavigationView navView, Button openFilters, RecyclerView productRecycler, Spinner )
++ androidx.drawerlayout.widget.DrawerLayout getRoot ()
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentCatalogBinding inflate (LayoutInflater )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentCatalogBinding inflate (LayoutInflater inflater, ViewGroup parent, boolean )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentCatalogBinding bind (View )
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentProductBinding{
+- androidx.constraintlayout.widget.ConstraintLayout rootView
++ android.widget.Button addToBasket
++ androidx.constraintlayout.widget.ConstraintLayout constraint
++ androidx.constraintlayout.widget.ConstraintLayout constraintSlider
++ com.smarteist.autoimageslider.SliderView imageSlider
++ android.widget.LinearLayout linearCharacteristic
++ android.widget.TextView productFirm
++ android.widget.TextView productModel
++ android.widget.TextView productName
++ android.widget.TextView productPrice
++ android.widget.TextView productQuantity
++ android.widget.TextView productSpecification
++ android.widget.TextView productType
+- void FragmentProductBinding (ConstraintLayout rootView, Button addToBasket, ConstraintLayout constraint, ConstraintLayout constraintSlider, SliderView imageSlider, LinearLayout linearCharacteristic, TextView productFirm, TextView productModel, TextView productName, TextView productPrice, TextView productQuantity, TextView productSpecification, TextView )
++ androidx.constraintlayout.widget.ConstraintLayout getRoot ()
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentProductBinding inflate (LayoutInflater )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentProductBinding inflate (LayoutInflater inflater, ViewGroup parent, boolean )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentProductBinding bind (View )
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ProductImageCardBinding{
+- androidx.cardview.widget.CardView rootView
++ android.widget.ImageView image
+- void ProductImageCardBinding (CardView rootView, ImageView )
++ androidx.cardview.widget.CardView getRoot ()
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ProductImageCardBinding inflate (LayoutInflater )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ProductImageCardBinding inflate (LayoutInflater inflater, ViewGroup parent, boolean )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ProductImageCardBinding bind (View )
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FilterCheckboxCardBinding{
+- androidx.constraintlayout.widget.ConstraintLayout rootView
++ androidx.constraintlayout.widget.ConstraintLayout card
++ android.widget.CheckBox checkbox
++ android.widget.TextView text
+- void FilterCheckboxCardBinding (ConstraintLayout rootView, ConstraintLayout card, CheckBox checkbox, TextView )
++ androidx.constraintlayout.widget.ConstraintLayout getRoot ()
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FilterCheckboxCardBinding inflate (LayoutInflater )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FilterCheckboxCardBinding inflate (LayoutInflater inflater, ViewGroup parent, boolean )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FilterCheckboxCardBinding bind (View )
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.CalalogFiltersLayoutBinding{
+- androidx.constraintlayout.widget.ConstraintLayout rootView
++ android.widget.Button apply
++ android.widget.TextView clearFirms
++ android.widget.TextView clearPrice
++ android.widget.TextView clearTypes
++ android.widget.Button close
++ androidx.constraintlayout.widget.ConstraintLayout constraintFirms
++ androidx.constraintlayout.widget.ConstraintLayout constraintTypes
++ androidx.recyclerview.widget.RecyclerView firmsRecycler
++ android.widget.EditText fromPrice
++ androidx.recyclerview.widget.RecyclerView typesRecycler
++ android.widget.EditText untilPrice
+- void CalalogFiltersLayoutBinding (ConstraintLayout rootView, Button apply, TextView clearFirms, TextView clearPrice, TextView clearTypes, Button close, ConstraintLayout constraintFirms, ConstraintLayout constraintTypes, RecyclerView firmsRecycler, EditText fromPrice, RecyclerView typesRecycler, EditText )
++ androidx.constraintlayout.widget.ConstraintLayout getRoot ()
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.CalalogFiltersLayoutBinding inflate (LayoutInflater )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.CalalogFiltersLayoutBinding inflate (LayoutInflater inflater, ViewGroup parent, boolean )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.CalalogFiltersLayoutBinding bind (View )
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentRegistrationBinding{
+- androidx.constraintlayout.widget.ConstraintLayout rootView
++ android.widget.Button buttonRegistration
++ com.google.android.material.textfield.TextInputEditText login
++ com.google.android.material.textfield.TextInputLayout loginTextInput
++ com.google.android.material.textfield.TextInputEditText number
++ com.google.android.material.textfield.TextInputLayout numberTextInput
++ com.google.android.material.textfield.TextInputEditText password
++ com.google.android.material.textfield.TextInputLayout passwordTextInput
++ android.widget.TextView tvInfo
+- void FragmentRegistrationBinding (ConstraintLayout rootView, Button buttonRegistration, TextInputEditText login, TextInputLayout loginTextInput, TextInputEditText number, TextInputLayout numberTextInput, TextInputEditText password, TextInputLayout passwordTextInput, TextView )
++ androidx.constraintlayout.widget.ConstraintLayout getRoot ()
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentRegistrationBinding inflate (LayoutInflater )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentRegistrationBinding inflate (LayoutInflater inflater, ViewGroup parent, boolean )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentRegistrationBinding bind (View )
+}
+class com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ImageSliderLayoutItemBinding{
+- androidx.cardview.widget.CardView rootView
++ android.widget.ImageView image
+- void ImageSliderLayoutItemBinding (CardView rootView, ImageView )
++ androidx.cardview.widget.CardView getRoot ()
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ImageSliderLayoutItemBinding inflate (LayoutInflater )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ImageSliderLayoutItemBinding inflate (LayoutInflater inflater, ViewGroup parent, boolean )
++ com.monsieur.cloy.guitarstorecleanarchitecture.databinding.ImageSliderLayoutItemBinding bind (View )
+}
+@enduml 

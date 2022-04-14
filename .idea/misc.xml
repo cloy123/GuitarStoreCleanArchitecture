@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/drawable/layout_border.xml" value="0.4558974358974359" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/drawable/white_layout_border.xml" value="0.4558974358974359" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/activity_main.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/basket_item_card.xml" value="0.44" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/calalog_filters_layout.xml" value="0.44" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/comment_settings_card.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/filter_checkbox_card.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/firm_settings_card.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/fragment_basket.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/fragment_catalog.xml" value="0.44" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/fragment_comment_settings.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/fragment_database_settings.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/fragment_firm_settings.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/fragment_login.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/fragment_product.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/fragment_product_settings.xml" value="0.44" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/fragment_product_type_settings.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/fragment_registration.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/fragment_start.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/fragment_table_settings.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/fragment_user_settings.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/image_slider_layout_item.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/product_card.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/product_image_card.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/product_settings_card.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/product_type_settings_card.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/layout/user_settings_card.xml" value="0.446875" />
+        <entry key="..\:/Desktop/GuitarStoreCleanArchitecture/app/src/main/res/menu/main_menu.xml" value="0.446875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
