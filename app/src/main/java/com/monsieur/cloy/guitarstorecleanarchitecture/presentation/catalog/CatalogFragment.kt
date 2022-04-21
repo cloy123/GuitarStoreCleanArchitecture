@@ -80,8 +80,8 @@ class CatalogFragment: Fragment() {
             applyFilters()
         }
         clearPrice.setOnClickListener {
-            fromPrice.setText("0")
-            untilPrice.setText("99999999")
+            fromPrice.setText("")
+            untilPrice.setText("")
         }
 
         clearFirms.setOnClickListener {
@@ -135,14 +135,12 @@ class CatalogFragment: Fragment() {
         }
 
         val from = if(fromPrice.text.isEmpty()){
-            fromPrice.setText("0")
             0
         }else{
             fromPrice.text.toString().toInt()
         }
 
         val to = if(untilPrice.text.isEmpty()){
-            untilPrice.setText("99999999")
             99999999
         }else{
             untilPrice.text.toString().toInt()
