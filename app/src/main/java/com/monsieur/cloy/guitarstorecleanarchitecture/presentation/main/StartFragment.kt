@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import com.monsieur.cloy.guitarstorecleanarchitecture.databinding.FragmentStartBinding
 import com.monsieur.cloy.guitarstorecleanarchitecture.presentation.catalog.CatalogFragment
 import com.monsieur.cloy.guitarstorecleanarchitecture.presentation.main.basket.BasketFragment
+import com.monsieur.cloy.guitarstorecleanarchitecture.presentation.main.history.HistoryFragment
 import com.monsieur.cloy.guitarstorecleanarchitecture.presentation.viewModels.MainViewModel
 import com.monsieur.cloy.guitarstorecleanarchitecture.utilits.changeToolBar
 import com.monsieur.cloy.guitarstorecleanarchitecture.utilits.replaceFragment
@@ -44,6 +45,9 @@ class StartFragment: Fragment() {
         binding.out.setOnClickListener {
             viewModel.logout()
         }
+        binding.history.setOnClickListener {
+            replaceFragment(HistoryFragment())
+        }
         binding.basket.setOnClickListener {
             if(viewModel.currentUser.value == null){
                 replaceFragment(LoginFragment())
@@ -66,10 +70,14 @@ class StartFragment: Fragment() {
             binding.registration.visibility = View.VISIBLE
             binding.login.visibility = View.VISIBLE
             binding.out.visibility = View.INVISIBLE
+            binding.history.visibility = View.INVISIBLE
+            binding.basket.visibility = View.INVISIBLE
         }else{
             binding.registration.visibility = View.INVISIBLE
             binding.login.visibility = View.INVISIBLE
             binding.out.visibility = View.VISIBLE
+            binding.history.visibility = View.VISIBLE
+            binding.basket.visibility = View.VISIBLE
         }
     }
 }

@@ -8,9 +8,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
 class HistoryRepositoryImpl(private val historyStorage: HistoryStorage): HistoryRepository {
-    override fun getAllHistory(): Flow<List<History>> {
+    override fun getHistoryByUserId(userId: Int): Flow<List<History>> {
         val mapper = HistoryMapper()
-        return historyStorage.getAllHistory().map { list ->
+        return historyStorage.getHistoryByUserId(userId).map { list ->
             list.map {
                 mapper.toDomainModel(it)
             }

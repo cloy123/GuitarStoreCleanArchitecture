@@ -17,4 +17,5 @@ abstract class GuitarStoreDatabase: RoomDatabase() {
     abstract fun userDao(): UserDao
     abstract fun productWithFirmAndProductTypeDao(): ProductWithFirmAndProductTypeDao
     abstract fun basketItemWithProductDao(): BasketItemWithProductDao
+    abstract fun historyWithProductDao(): HistoryWithProductDao
 }

@@ -26,7 +26,8 @@ class MainViewModel(
     private val getAllProductTypesUseCase: GetAllProductTypesUseCase,
     private val getBasketItemsByUserIdUseCase: GetBasketItemsByUserIdUseCase,
     private val loginUseCase: LoginUseCase,
-    private val registerUserUseCase: RegisterUserUseCase
+    private val registerUserUseCase: RegisterUserUseCase,
+    private val getHistoryByUserIdUseCase: GetHistoryByUserIdUseCase
 ) : AndroidViewModel(application) {
 
     val currentUser = MutableLiveData<User?>()
@@ -43,6 +44,8 @@ class MainViewModel(
     val allProductTypes = MutableLiveData<List<ProductType>>()
 
     val basketItems = MutableLiveData<List<BasketItem>>()
+
+    val history = MutableLiveData<List<History>>()
 
     init {
         viewModelScope.launch(Dispatchers.Default) {
@@ -91,6 +94,20 @@ class MainViewModel(
                         basketItems.postValue(ArrayList())
                     } else {
                         basketItems.postValue(it)
+                    }
+                }
+            }
+        }
+    }
+
+    fun findHistory() {
+        if (currentUser.value != null) {
+            viewModelScope.launch(Dispatchers.Default) {
+                getHistoryByUserIdUseCase.execute(currentUser.value!!.id).collect {
+                    if (it.isEmpty()) {
+                        history.postValue(ArrayList())
+                    } else {
+                        history.postValue(it)
                     }
                 }
             }

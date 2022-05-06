@@ -18,7 +18,8 @@ val appModule = module {
             getAllProductTypesUseCase = get(),
             getBasketItemsByUserIdUseCase = get(),
             loginUseCase = get(),
-            registerUserUseCase = get()
+            registerUserUseCase = get(),
+            getHistoryByUserIdUseCase = get()
         )
     }
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GuitarStoreCleanArchitecture</string>
+    <string name="app_name">Guitar Store</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="delete_all">Удалить всё</string>
@@ -16,7 +16,7 @@
     <string name="clear">Очистить</string>
     <string name="close">Закрыть</string>
     <string name="filters">Фильтры</string>
-    <string name="make_order">Сделать заказ</string>
+    <string name="make_order">Оформить заказ</string>
     <string name="registration">Регистрация</string>
     <string name="login">Войти</string>
     <string name="price">Цена</string>
@@ -42,6 +42,7 @@
     <string name="not_available">Нет в наличии</string>
     <string name="login_text">Логин</string>
     <string name="open_catalog">Каталог</string>
+    <string name="history">История покупок</string>
     <string-array name="product_types">
         <item>Электогитара</item>
         <item>Басс-гитара</item>

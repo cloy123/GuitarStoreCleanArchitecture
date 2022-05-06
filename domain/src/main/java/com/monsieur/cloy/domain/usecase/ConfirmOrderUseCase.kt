@@ -37,7 +37,8 @@ class ConfirmOrderUseCase(
                         Product.calculatePrice(item.product!!.price, item.product!!.discount),
                         LocalDateTime.now(),
                         item.userId,
-                        address
+                        address,
+                        null
                     )
                 )
                 val newProduct = item.product

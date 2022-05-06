@@ -1,20 +1,40 @@
 package com.monsieur.cloy.data.mappers
 
+import com.monsieur.cloy.data.storage.models.BasketItemWithProduct
 import com.monsieur.cloy.data.storage.models.FirmEntity
 import com.monsieur.cloy.data.storage.models.HistoryEntity
-import com.monsieur.cloy.domain.models.Firm
-import com.monsieur.cloy.domain.models.History
+import com.monsieur.cloy.data.storage.models.HistoryWithProduct
+import com.monsieur.cloy.domain.models.*
 
 class HistoryMapper {
-    fun toDomainModel(historyEntity: HistoryEntity): History {
+
+    fun toDomainModel(historyWithProduct: HistoryWithProduct): History {
+        val firm = Firm(historyWithProduct.firmId, historyWithProduct.firmName)
+        val type = ProductType(historyWithProduct.typeId, historyWithProduct.typeName)
+
+        val product = Product(
+            historyWithProduct.productId,
+            historyWithProduct.popularity,
+            historyWithProduct.productQuantity,
+            historyWithProduct.imagesId,
+            firm,
+            type,
+            historyWithProduct.model,
+            historyWithProduct.specification,
+            historyWithProduct.isShow,
+            historyWithProduct.productPrice,
+            historyWithProduct.discount
+        )
+
         return History(
-            historyEntity.id,
-            historyEntity.productId,
-            historyEntity.quantity,
-            historyEntity.price,
-            historyEntity.dateTime,
-            historyEntity.userId,
-            historyEntity.address
+            historyWithProduct.id,
+            historyWithProduct.productId,
+            historyWithProduct.quantity,
+            historyWithProduct.price,
+            historyWithProduct.dateTime,
+            historyWithProduct.userId,
+            historyWithProduct.address,
+            product
         )
     }
 

@@ -9,6 +9,7 @@ class History(
     val price: Int,
     val dateTime: LocalDateTime,
     val userId: Int,
-    var address: String
+    var address: String,
+    val product: Product?
 ) {
 }

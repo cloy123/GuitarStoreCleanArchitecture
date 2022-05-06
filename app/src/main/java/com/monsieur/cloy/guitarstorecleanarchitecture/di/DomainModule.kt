@@ -1,5 +1,6 @@
 package com.monsieur.cloy.guitarstorecleanarchitecture.di
 
+import com.monsieur.cloy.data.db.GuitarStoreDatabase
 import com.monsieur.cloy.domain.usecase.*
 import org.koin.dsl.module
 
@@ -33,5 +34,8 @@ val domainModule = module {
     }
     factory<GetBasketItemsByUserIdUseCase> {
         GetBasketItemsByUserIdUseCase(basketItemRepository = get())
+    }
+    factory<GetHistoryByUserIdUseCase> {
+        GetHistoryByUserIdUseCase(historyRepository = get())
     }
 }

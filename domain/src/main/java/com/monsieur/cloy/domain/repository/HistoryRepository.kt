@@ -4,8 +4,7 @@ import com.monsieur.cloy.domain.models.History
 import kotlinx.coroutines.flow.Flow
 
 interface HistoryRepository {
-
-    fun getAllHistory(): Flow<List<History>>
+    fun getHistoryByUserId(userId: Int): Flow<List<History>>
 
     suspend fun insertHistory(history: History)
 }

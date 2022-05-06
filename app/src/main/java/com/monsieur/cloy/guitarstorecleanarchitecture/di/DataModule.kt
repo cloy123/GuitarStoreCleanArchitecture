@@ -5,6 +5,7 @@ import com.monsieur.cloy.data.db.*
 import com.monsieur.cloy.data.repository.*
 import com.monsieur.cloy.data.storage.*
 import com.monsieur.cloy.domain.repository.*
+import com.monsieur.cloy.domain.usecase.GetHistoryByUserIdUseCase
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
@@ -16,7 +17,7 @@ val dataModule = module {
         FirmStorage(firmDao = get())
     }
     single<HistoryStorage> {
-        HistoryStorage(historyDao = get())
+        HistoryStorage(historyDao = get(), historyWithProductDao = get())
     }
     single<ProductStorage> {
         ProductStorage(productDao = get(), productWithFirmAndProductTypeDao = get())
@@ -35,9 +36,13 @@ val dataModule = module {
         ).createFromAsset("database/guitar_store_database.db")
             .build()
     }
+    single<HistoryWithProductDao> {
+        get<GuitarStoreDatabase>().historyWithProductDao()
+    }
     single<BasketItemDao> {
         get<GuitarStoreDatabase>().basketItemDao()
     }
+
     single<FirmDao> {
         get<GuitarStoreDatabase>().firmDao()
     }
