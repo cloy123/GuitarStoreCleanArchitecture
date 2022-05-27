@@ -22,4 +22,18 @@ class ChangeQuantityBasketItemUseCase(
             }
         }
     }
+
+    suspend fun executeNew(userId: Int, productId: Int, quantity: Int) {
+        withContext(Dispatchers.IO) {
+            val basketItem = basketItemRepository.findBasketItem(userId, productId)
+            if (basketItem != null) {
+                if (quantity <= 0) {
+                    basketItemRepository.deleteBasketItemById(basketItem.id)
+                }else{
+                    basketItem.quantity = quantity
+                    basketItemRepository.updateBasketItem(basketItem)
+                }
+            }
+        }
+    }
 }

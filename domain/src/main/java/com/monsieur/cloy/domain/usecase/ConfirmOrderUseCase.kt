@@ -49,5 +49,4 @@ class ConfirmOrderUseCase(
             emit(ConfirmOrderResult(true))
         }
     }
-
 }
